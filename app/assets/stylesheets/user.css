@@ -1,10 +1,9 @@
 .account-page .account-page__inner {
-  width: 980px;
-  margin: 60px auto;
-  padding: 60px;
-  background-color: rgb(114, 179, 138);
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  width: 100vw;
+  padding: 100px ;
+  background-color: rgb(255, 255, 255);
+  border: 100px outset rgb(112, 212, 149);
+  border-radius: 60px ;
 }
 .account-page .account-page__inner .account-page__inner--left, .account-page .account-page__inner .account-page__inner--right {
   float: left;
@@ -89,6 +88,7 @@
   width: 5px;
   background-color: #d65f4c;
 }
+
 
 #error_explanation {
   margin: 20px 0;

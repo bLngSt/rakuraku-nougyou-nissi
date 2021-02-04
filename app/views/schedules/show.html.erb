@@ -1,0 +1,35 @@
+<div class="schedule-input-text">
+
+  <%= form_with(model: @schedule, local: true) do |form| %>
+
+    <div class="work">
+      <%= form.label :"業務内容" %>
+      <%= @schedule.work %>
+    </div>
+
+    <div class="item">
+      <%= form.label :"作業道具" %>
+      <%= @schedule.item %>
+    </div>
+
+    <div class="place">
+      <%= form.label :"場所　　" %>
+      <%= @schedule.place %>
+    </div>
+
+    <div class="memo">
+      <%= form.label :"備考　　" %>
+      <%= @schedule.memo %>
+    </div>
+    
+    <div class="submit">
+      <%= link_to 'カレンダーのページに戻る', schedules_index_path %>
+    </div>
+    <div class="submit">
+      <%= link_to '編集する', edit_schedule_path(@schedule.id), method: :get %>
+    </div>
+    <div class="submit">
+      <%= link_to '削除', schedule_path{@schedule.id}, method: :delete %>
+    </div>
+  <% end %>
+</div>
