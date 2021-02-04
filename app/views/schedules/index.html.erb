@@ -1,7 +1,7 @@
 <div class="schedule-calendar-header">
   <div class="left-header">
     <div class="header-title">
-      <%= link_to current_user.name, edit_user_path(current_user) %>さんのカレンダー
+      <%= link_to "ようこそ" + current_user.name + "さん", edit_user_path(current_user) %>
     </div>
   </div>
   <div class="right-header">
@@ -16,7 +16,7 @@
     <%= date.day %>
       <% schedules.each do |schedule| %>
         <div>
-          <%= link_to schedule.work, schedule_path(schedule.id), method: :get %>
+          <%= link_to schedule.work, schedule_path(schedule.id), method: :get, class: 'btn'%>
         </div>
       <% end %> 
   <% end %>

@@ -3,6 +3,7 @@
     <div class='account-page__inner--left account-page__header'>
       <h2>らくらく農業日誌へようこそ！</h2>
       <h4>以前会員登録した情報を入力してください</h4>
+      <%= link_to '新規登録画面を表示させる', new_user_registration_path %>
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>

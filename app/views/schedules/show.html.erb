@@ -1,5 +1,11 @@
-<div class="schedule-input-text">
-
+<div class='account-page' id='account-page'>
+  <div class='account-page__inner clearfix'>
+    <div class='account-page__inner--left account-page__header'>
+      <h2>予定を記入してください</h2>
+      <%= link_to 'カレンダーのページに戻る', schedules_index_path, class: 'btn'%>
+      <%= link_to '編集する', edit_schedule_path(@schedule.id), method: :get, class: 'btn'%>
+      <%= link_to '削除', schedule_path{@schedule.id}, method: :delete, class: 'btn' %>
+    </div>
   <%= form_with(model: @schedule, local: true) do |form| %>
 
     <div class="work">
@@ -20,16 +26,6 @@
     <div class="memo">
       <%= form.label :"備考　　" %>
       <%= @schedule.memo %>
-    </div>
-    
-    <div class="submit">
-      <%= link_to 'カレンダーのページに戻る', schedules_index_path %>
-    </div>
-    <div class="submit">
-      <%= link_to '編集する', edit_schedule_path(@schedule.id), method: :get %>
-    </div>
-    <div class="submit">
-      <%= link_to '削除', schedule_path{@schedule.id}, method: :delete %>
     </div>
   <% end %>
 </div>
