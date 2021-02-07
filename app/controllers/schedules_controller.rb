@@ -9,13 +9,16 @@ class SchedulesController < ApplicationController
   end
 
   def create
-    Schedule.create(schedule_parameter)
-    redirect_to root_path
+    if Schedule.create(schedule_parameter)
+      redirect_to root_path
+    else
+      render :create
+    end
   end
   def edit
   end
   def destroy
-    if schedule.destroy
+    if @schedule.destroy
       redirect_to root_path
     else
       render :edit
